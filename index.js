@@ -1,15 +1,16 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const inquirer = require("inquirer");
-const consoleTable = require("console.table");
 const promisemysql = require("promise-mysql");
 const express = require("express");
+const PORT = process.env.PORT || 3001;
+const app = express();
 
 const connectionProperties = {
     host: "localhost",
-    port: 3001,
+    port: 3306,
     user: "root",
     password: "Yakmeister12",
-    database: "employees_DB"
+    database: "employees_db"
 }
 
 const connection = mysql.createConnection(connectionProperties);
@@ -758,3 +759,16 @@ function viewDeptBudget(){
         mainMenu();
     });
 }
+
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
+
+// app.get('/', (req, res) => {
+//     res.json({
+//       message: 'Hello World'
+//     });
+//   });
+
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+//   });
