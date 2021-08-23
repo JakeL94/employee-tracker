@@ -2,8 +2,8 @@ const mysql = require("mysql2");
 const inquirer = require("inquirer");
 const promisemysql = require("promise-mysql");
 const express = require("express");
-const PORT = process.env.PORT || 3001;
-const app = express();
+// const PORT = process.env.PORT || 3001;
+// const app = express();
 
 const connectionProperties = {
     host: "localhost",
@@ -48,6 +48,7 @@ function mainMenu(){
       ]
     })
     .then((answer) => {
+        console.log(answer);
 
         switch (answer.action) {
             case "View all employees":
