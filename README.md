@@ -21,6 +21,9 @@ Run source again, this time using the absolute path to seeds.sql.
  - mysql2
  - Express
 
+## Walkthrough video
+- A video showing how the application works is [Here](https://drive.google.com/file/d/1yw_g6if3iJRviZIZruXTpBlUdEiHZWF4/view)
+
 ## License
 This application is covered under the MIT license.
 
